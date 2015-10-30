@@ -1,5 +1,52 @@
 html {
-	color: rgba(0, 0, 0, 0);
+	background-color: #1AD1FF;
 }
 
+h1{
+	
+	font-weight: 30;
+	font-family: cursive;
+	text-align: center;
+}
+p{
+	
+	font-weight: 24;
+	font-family: Verdana;
+	text-align: center;
+}
+p,h1,h2 {
+	color : #FFFFFF;
+	text-align: center;
+}
+.Url{
+	font-family: sans-serif;
+	font-size: 26 px;
+	color: #66ff33;
+	text-align: center;
+}
 
+#div2{
+	width: 400px;
+    height: 200px;
+    background-color: #FF1489;
+    box-shadow: 10px 10px 5px #888888;
+    margin: auto;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    bottom: 0; 
+    right: 0;
+    text-align: center;
+    padding-top: 10px;
+    border: 15px solid black;
+}
+
+#maindiv{
+	background-color: #9900cc;
+}
+
+#submitbutton{
+	color: black;
+	font-family: monospace;
+	font-weight: bold;
+}
