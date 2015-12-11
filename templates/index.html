@@ -1,40 +1,59 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<!DOCTYPE HTML>
+
+<html>
 	<head>
-		<title>Web Architecture: Project 1</title>
-		<link rel="stylesheet" href="static/css/style.css">
-		<script type="text/javascript" src="static/js/jquery-1.11.3.js"></script>
-		<script type="text/javascript" src = "static/js/script.js"></script>
+		<title>Yelper</title>
+		<meta charset="utf-8" />
+		
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" type="text/css" href="static/css/main.css" />
+		
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
 	<body>
-	<script type="text/javascript" src="static/js/jquery-1.11.3.js"></script>
-	<script type="text/javascript" src = "static/js/script.js"></script>
 
-	<div id = "maindiv">
-	<div id="headerDiv">
-	<h1>URL SHORTENER</h1>
-	<h2>Obtain a shorter URL in just 1 click!</h2> 
-	
-	</div>
+		<!-- Header -->
+			<header id="header">
+				<h1>Yelper</h1>
+				<p>Not only the <strong> Where </strong>, But also the <strong>How</strong> <br />
+					<br>
+					<br>
+				Enter the address you want to be picked up from and the city where u want to eat! we'll help you get there!</p>
+				<!-- We'll help you get you there!<BR> -->
+				<!-- <a href="http://html5up.net">HTML5 UP</a>.</p> -->
+			</header>
 
-	
+		<!-- Signup Form -->
+			<div id="div2">
+			<form action="/results" id="UrlForm" name="UrlForm" method="POST" >
+				<label for="useraddress" class="Url">Your pickup address? (Ex: 1234 University Avenue Berkeley) </label> 
+				<input type="text" id="useraddress" name="useraddress" value=""  />
+				<br /><br /><br />	
+				<label for="city" class="Url">City you want to eat in? (Ex: Sacramento)</label> 
+	        	<input type="text" id="city" name="city" value="">
+				<!-- <input type="submit" value="Sign Up" /> -->
+				<br>
+				<input type="submit" value="Find Restaurants" class="submitbutton"/>
+			</form>
+			</div>
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<!-- <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li> -->
+					<!-- <li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li> -->
+				</ul>
+				<ul class="copyright">
+					<!-- <li>&copy; Untitled.</li> -->
+					<!-- <li>Credits: <a href="http://html5up.net">HTML5 UP</a></li> -->
+				</ul>
+			</footer>
 
-	<div id="div2">
-	<p>Enter the long URL that needs to be shortened!</p>
-	<form action="/create" id="UrlForm" name="UrlForm" method="POST" class="Url">
-        <label for="longURL" class="Url">Long URL: </label> 
-        <input type="text" id="longURL" name="longURL" value="" class="Url">
-        <br /><br /><br />
-        <label for="shortURL" class="Url">Short URL: </label> 
-       
-        <input type="text" id="shortURL" name="shortURL" value="" class="Url" onkeyup="myFunction(document.UrlForm.shortURL)"> 
-        <br /><br /><br />
-
-        <input type="submit" value="Create Short URL" id="submitbutton" disabled="disabled"/>
-
-    </form>	
-	</div>
-	</div>
+		<!-- Scripts -->
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="static/js/main.js"></script>
 
 	</body>
 </html>

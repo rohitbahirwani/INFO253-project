@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<!--
+	Alpha by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Yelper</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="static/secondcss/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body class="landing">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header" class="alt">
+					
+					<nav id="nav">
+						<ul>
+							<!--id="UrlForm" name="UrlForm" <li><a href="index.html" onclick="buttonfunction()">Home</a></li> -->
+							<form action="/"  method="GET" >
+				<input type="submit" value="Home" class="submitbutton"/>
+			</form>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Banner -->
+				<section id="banner">
+					<h2>Yelper</h2>
+					<!-- <p>You are almost there!</p> -->
+					<!-- <ul class="actions">
+						<li><a href="#" class="button special">Sign Up</a></li>
+						<li><a href="#" class="button">Learn More</a></li>
+					</ul> -->
+				</section>
+
+			<!-- Main -->
+				<section id="main" class="container">
+
+					<section class="box special">
+						<header class="major">
+							<h2>Here is the list of top rated restaurants along with the UberX details !</h2>
+							<!-- <br />
+							for doing stuff with your phone</h2>
+							<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare<br />
+							adipiscing nunc adipiscing. Condimentum turpis massa.</p> -->
+						</header>
+						<span class="image featured"><img src="static/images/yelper.jpg" alt="" /></span>
+					</section>
+
+					<section class="box special features">
+						{% for item in arrayRestSorted %}
+						<div class="features-row">
+							
+							<section>
+								<br>
+								<span class="icon major fa-bolt accent2"></span>
+								<h3>Restaurant Name: {{ item.0 }}</h3>
+								<!-- <h4>Number of Reviews on Yelp: {{ item.1 }}</h4> -->
+								<h4>Address of the Restaurant: {{ item.2 }}</h4>
+								<h4>UberX Fare: {{ item.8 }}</h4>
+								<h4>Once picked up, you will reach in: {{ item.9 }} mins</h4>
+								<h4>Miles to be covered: {{ item.10 }}</h4>
+								<br>
+								<br>
+								<br>
+							</section>
+
+
+							{% endfor %}
+						</div>
+						
+						
+						
+					</section>
+
+					
+
+				</section>
+
+			<!-- CTA -->
+				<!-- <section id="cta">
+
+					<h2>Sign up for our latest news!</h2>
+					<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc.</p>
+
+					<form>
+						<div class="row uniform 50%">
+							<div class="8u 12u(mobilep)">
+								<input type="email" name="email" id="email" placeholder="Email Address" />
+							</div>
+							<div class="4u 12u(mobilep)">
+								<input type="submit" value="Sign Up" class="fit" />
+							</div>
+						</div>
+					</form>
+
+				</section> -->
+
+			<!-- Footer -->
+				
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="static/secondjs/main.js"></script>
+
+	</body>
+</html>
